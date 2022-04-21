@@ -1,171 +1,146 @@
+.welcome {
+  display: grid;
+  /* grid-template-rows: 1fr; */
+  grid-template-columns: 1fr;
+  grid-template-areas: "side content";
+  position: absolute;
+  /* top: 1100px; */
+  gap: 1rem;
+  right: 10px;
+  width: 90vw;
+  margin-top: 10px;
+}
+.welcome img {
+  max-width: 100%;
+}
+.author-info {
+  grid-area: side;
+  /* border: solid brown; */
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  color: silver;
+}
+.author-info h1 {
+  font-size: 30px;
+  margin-left: 1px;
+  color: silver;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px red;
+  background: url(/image/abc.jpg);
+  /* -webkit-background-clip:text; */
+  background-position: 0 0;
+  animation: back 10s linear infinite;
+}
 
-  * {
-    --primary: #ddd;
-    /* --dark: #333; */
-    --light: #fff;
-    --shadow: 0 1px  rgba(0, 0, 0, 25);
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
+@keyframes back {
+  100% {
+      background-position: 2000px 0;
   }
-
-  body{
-    margin: 0;
-    padding: 0;
-    font-family: serif;
-    left: 0;
-    background: rgb(34, 33, 33)
-  }
- 
+}
+.card-date {
+  grid-area: content;
+  font-size: medium;
+  line-height: 25px;
+  color: silver;
+}
+.card-date h2 {
+  font-size: 20px;
+}
+.card-date p {
+  font-size: 17px;
+}
+.african-food {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6";
+  position: absolute;
+  top: 715px;
+  gap: 1rem;
+  right: 10px;
+  width: 90vw;
+  box-shadow: 2 1 15px rgba(0, 0, 0, 25);
   
-  
-  .welcome{
-display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr ;
-    grid-template-areas: 
-    "side content";
-    position: absolute;
-    /* top: 1100px; */
-    gap: 1rem;
-    right: 10px;
-    width: 90vw;
-    margin-top: 50px;
-    }
-    .welcome img{
-      max-width: 100%;
-    }
-    .author-info{
-      grid-area: side;
-      /* border: solid brown; */
-      margin-left: 10px;
-      margin-right: 10px;
-      padding: 10px;
-      color: silver;
-    
-    }
-    .author-info h1{
-     font-size: 30px;
-    margin-left: 1px;
-    color: silver;
-    text-transform: uppercase;
-    -webkit-text-stroke:1px red;
-    background:url(/image/abc.jpg);
-    /* -webkit-background-clip:text; */
-    background-position:0 0;
-    animation: back 10s linear infinite;
-    
 }
-
-@keyframes back{
-100%{
-    background-position: 2000px 0;
+.african-food img {
+  max-width: 100%;
 }
-}
-    .card-date{
-      grid-area: content ;
-      font-size: medium;
-      line-height: 25px;
-      color: silver;
-      
-    }
-    .card-date h2{
-      font-size: 20px;
-    }
-    .card-date p{
-      font-size: 17px
-    }
-.african-food{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-areas: 
-    "card1 card2"
-    "card3 card4"
-    "card5 card6";
-    position: absolute;
-    top: 700px;
-    gap: 1rem;
-    right: 10px;
-    width: 90vw;
-    box-shadow: 2 1 15px rgba(0, 0, 0, 25);
-    }
-  .african-food img{
-    max-width: 100%;
-  }
-.Rice{
+.Rice {
   grid-area: card1;
   color: silver;
 }
-.ogbono{
+.ogbono {
   grid-area: card2;
   color: silver;
 }
-.jollof{
+.jollof {
   grid-area: card3;
   color: silver;
 }
-.ewedu{
+.ewedu {
   grid-area: card4;
   color: silver;
 }
-.Efo{
-  grid-area: card5 ;
+.Efo {
+  grid-area: card5;
   color: silver;
 }
-.akara{
-  grid-area:card6 ;
+.akara {
+  grid-area: card6;
   color: silver;
 }
 
-.social-sharing{
+.social-sharing {
   display: grid;
-  grid-template-columns: 1fr ;
-  grid-template-areas: 
-  "tw1" 
-  "fb2"
-  "lin3";
+  grid-template-columns: 1fr;
+  grid-template-areas:
+      "tw1"
+      "fb2"
+      "lin3";
   position: absolute;
   gap: 1rem;
   right: 10px;
   width: 90vw;
   box-shadow: 2 1 15px rgba(0, 0, 0, 25);
-  top: 2550px;
+  top: 2500px;
   bottom: 0;
-  }
-  .Twitter{
-    grid-area: tw1;
-    color: silver;
 
-  }
-  .facebook{
-    grid-area: fb2;
-    color: silver;
-  }
-  .linkedin{
-    grid-area: lin3;
-    color: silver;
-  }
-  .social-sharing .Twitter button:hover{
-    color: red;
-  }
-  .Rice h3{
-      text-decoration: underline;
-  }
-    .card-date p button:hover{
-      color: red;
-    }
-  
-  @media (min-width: 300px) and (max-width:600px){
-    .social-sharing{
+}
+.Twitter {
+  grid-area: tw1;
+  color: silver;
+}
+.facebook {
+  grid-area: fb2;
+  color: silver;
+}
+.linkedin {
+  grid-area: lin3;
+  color: silver;
+}
+.social-sharing .Twitter button:hover {
+  color: red;
+}
+.Rice h3 {
+  text-decoration: underline;
+}
+.card-date p button:hover {
+  color: red;
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+  .social-sharing {
       display: grid;
-      
-      grid-template-columns: 1fr ;
-      grid-template-areas: 
-      "tw1" 
-      "fb2"
-      "lin3";
+
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          "tw1"
+          "fb2"
+          "lin3";
       position: absolute;
       gap: 1rem;
       right: 10px;
@@ -173,59 +148,48 @@ display: grid;
       box-shadow: 2 1 15px rgba(0, 0, 0, 25);
       top: 1650px;
       bottom: 0;
-      }
-        
-      }
-      .welcome{
-        grid-template-areas: 
-        "side content"
-                       ;
-      }
-      .african-food{
+  }
+}
+.welcome {
+  grid-template-areas: "side content";
+}
+.african-food {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6";
+}
 
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-bottom: 0;
-        grid-template-areas: 
-        "card1 card2"
-        "card3 card4"
-        "card5 card6";
-    
-    }
-  
-    @media (min-width: 700px) and (max-width:900px){
-      .social-sharing{
-        display: grid;
-        
-        grid-template-columns: 1fr ;
-        grid-template-areas: 
-        "tw1" 
-        "fb2"
-        "lin3";
-        position: absolute;
-        gap: 1rem;
-        right: 10px;
-        width: 90vw;
-        box-shadow: 2 1 15px rgba(0, 0, 0, 25);
-        top: 1850px;
-        bottom: 0;
-        }
-          
-        }
-        .welcome{
-          grid-template-areas: 
-          "side content"
-                         ;
-        }
-        .african-food{
-  
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-bottom: 0;
-          grid-template-areas: 
-          "card1 card2"
-          "card3 card4"
-          "card5 card6";
-      
-      }
-    
+@media (min-width: 700px) and (max-width: 900px) {
+  .social-sharing {
+      display: grid;
+
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          "tw1"
+          "fb2"
+          "lin3";
+      position: absolute;
+      gap: 1rem;
+      right: 10px;
+      width: 90vw;
+      box-shadow: 2 1 15px rgba(0, 0, 0, 25);
+      top: 1850px;
+      bottom: 0;
+  }
+}
+.welcome {
+  grid-template-areas: "side content";
+}
+.african-food {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6";
+}
